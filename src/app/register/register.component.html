@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="modal-dialog modal-login">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form  (ngSubmit)="onSubmit()" #f="ngForm">
+          <div id="user-data"
+            ngModelGroup="userData"
+            #userData="ngModelGroup">
+            <div class="form-group">
+              <div class="body"> 
+                  <label for="username">First name</label>
+                  <input type="text" class="form-control mb-2 mr-sm-4" id="name" placeholder="First name" ngModel name="name"><br>
+                  <label for="username">Last name</label>
+                  <input type="text" class="form-control mb-2 mr-sm-4" id="name" placeholder="Last name" ngModel name="name">
+                  </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" ngModel name="email" required email #email="ngModel">
+              <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+            <label for="password">password</label>
+              <input type="password" id="password" class="form-control" ngModel name="password" required>
+              <span class="help-block" *ngIf="!email.valid && email.touched">Please enter minimum 8 characters</span>
+            </div>
+          </div>
+          <h4><b>Mobile</b></h4>
+          <input type="text" class="form-control mb-2 mr-sm-4" id="num2" placeholder="Enter 10-digits mobile number" name="m:no">
+          <h4><b>Gender</b></h4>
+          <div class="radio" *ngFor="let gender of genders">
+            <label><input type="radio" name="gender" ngModel [value]="gender" required> {{ gender }} </label>
+          </div>
+          <p *ngIf="!userData.valid && userData.touched">User Data is invalid!</p>
+          <div class="form-group">
+            <label for="secret">Secret Questions</label>
+            <select id="secret"
+              class="form-control" [ngModel]="defaultQuestion" name="secret">
+              <option value="pet">Your Pet Name?</option>
+              <option value="teacher">Your First Teacher?</option>
+              <option value="number">First Mobile Number?</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="questionAnswer" rows="3" class="form-control" [(ngModel)]="answer"></textarea>
+          </div>
+          <button class="btn btn-primary pull-right" type="submit">Submit</button>
+          <br>
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

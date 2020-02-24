@@ -1,0 +1,147 @@
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" routerLink="/" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          <img src="assets\image\new logo.png" alt="LOGOO" width="160" height="50">
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li href="#myModal" class="active"><a routerLink="/"><b>Home</b></a></li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>Men</b>
+                </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="container-fluid bg-3 text-center">   
+                  <a class="dropdown-item" routerLink="/tshirt"><b>Casual Shirts</b></a><br> 
+              <br>
+                  <a class="dropdown-item" routerLink="/formalshirts"><b>Formal Shirts</b></a><br>
+              <br>
+                  <a class="dropdown-item" routerLink="/casualshirts"><b> T-Shirts</b></a><br>
+              <br>
+                  <a class="dropdown-item" routerLink="/winterwear"><b>Winter wear</b></a><br>
+              <br>
+                  <a class="dropdown-item" routerLink="/nightwear"><b>Night Wear</b></a><br>
+              <br>
+                  <a class="dropdown-item" routerLink="/jeans"><b>Jeans</b></a><br>
+              <br>
+                  <a class="dropdown-item" routerLink="/trousers"><b>Trousers</b></a><br>
+              <br>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><b>Something else here</b></a>
+                </div>
+            </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b> Women</b>
+                      </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="container-fluid bg-3 text-center">   
+                    <a class="dropdown-item" routerLink="/kurtasw">Kurtas</a><br>
+                    <br>
+                    <a class="dropdown-item" routerLink="/kurtiesw">kurtis</a><br>
+                    <br>
+                    <a class="dropdown-item" routerLink="/sarees">Sarees</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Westren wear</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Tops and T-shirts</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Winter wear</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Night Wear</a><br>
+                    <br>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </div>
+                    </li>
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b> KIDS</b>
+                      </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="container-fluid bg-3 text-center">   
+                    <a class="dropdown-item" href="#">T-Shirts</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Formal Shirts</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Casual Shirts</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Winter wear</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Night Wear</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">jeans</a><br>
+                    <br>
+                    <a class="dropdown-item" href="#">Trousers</a><br>
+                    <br>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </div>
+                    </li>
+                  <li><a href="#"><b>About US</b></a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#myModal" class="glyphicon glyphicon-user"  data-toggle="modal"><b> Login</b></a></li>
+                  <li><a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart"></span><b>Cart</b></a></li>
+                    </ul>
+              </div>
+          </div>
+          </nav>
+          <div id="myModal" class="modal fade">
+                <div class="modal-dialog modal-login">
+                  <div class="modal-content">
+                      <div class="modal-header">				
+                      <h4 class="modal-title">Buyer Login</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+
+                    
+
+                    <div class="modal-body">	
+                      
+
+                    <div class="form-group">
+                        
+                      <label for="Username">Username or Email</label>
+                      
+                      <input type="text"id="username"class="form-control" name="username"required>
+                    
+                  
+                  <div class="clearfix">
+                    <label>Password</label>
+                    <a href="#" class="pull-right text-muted"><small><b>Forgot?</b></small></a>
+                    </div>	
+                    
+                    <input  type="password" class="form-control" name="password"  [(ngModel)] ="required">
+                    <p [hidden]=hide>{{required}}</p>
+                    <label class="checkbox-inline pull-left">
+                  <input type="radio" name="radio" unchecked (click)="onAdd()"><b>Show password</b></label><br>
+                  
+                    </div>
+                  
+                </div>
+                
+
+               
+           
+                  <div class="modal-footer">
+                <label class="checkbox-inline pull-left"><input type="checkbox"> Remember Me</label>
+                <p><b>Not Registered ?</b> <a routerLink="/register"><b><u>SignUp</u></b></a></p><br>
+                <a class=" pull-left" routerLink="/seller"><h5><b><u>Login As Seller</u></b></h5></a>
+                <br>
+                <button type="submit" class="btn btn-primary pull-right" (click)="myId()">Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+              
